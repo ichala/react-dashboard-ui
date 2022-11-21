@@ -1,35 +1,60 @@
 import React from 'react';
+import { FaHome, FaChartPie, FaUserFriends } from 'react-icons/fa';
+import { BiMenuAltLeft } from 'react-icons/bi';
 
 function Sidebar({ children }) {
   return (
     <>
       <div className="drawer drawer-mobile">
-        <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-center justify-center">
-          {children}
-          <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
-
+        <input id="SideBar" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content  bg-base-100">
+          <div className="navbar bg-base-100">
+            <div className="flex-1">
+              <label htmlFor="SideBar" className="text-base-content  drawer-button lg:hidden"><BiMenuAltLeft size={30} /></label>
+            </div>
+            <div className="flex-none">
+              <div tabIndex={0} className="dropdown dropdown-end">
+                <label className="btn btn-ghost btn-circle avatar">
+                  <div className="w-10 rounded-full">
+                    <img alt="s" src="https://placeimg.com/80/80/people" />
+                  </div>
+                </label>
+                <ul className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                  <li>
+                    <a href="#s" className="justify-between">
+                      Profile
+                      <span className="badge">New</span>
+                    </a>
+                  </li>
+                  <li><a href="#s">Settings</a></li>
+                  <li><a href="#s">Logout</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="container-lg px-4 h-100">
+            {children}
+          </div>
         </div>
         <div className="drawer-side">
-          <label htmlFor="my-drawer-2" className="drawer-overlay" />
+          <label htmlFor="SideBar" className="drawer-overlay" />
           <ul className="menu p-4 w-80 bg-base-200 text-base-content">
-            lololo
             <li>
               <a href="#s">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                Item 1
+                <FaHome className="h-6 w-6" />
+                Home
               </a>
             </li>
             <li>
               <a href="#s">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                Item 1
+                <FaChartPie className="h-6 w-6" />
+                Statistiques
               </a>
             </li>
             <li>
               <a href="#s">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                Item 1
+                <FaUserFriends className="h-6 w-6" />
+                Users
               </a>
             </li>
 
