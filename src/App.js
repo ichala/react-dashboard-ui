@@ -1,8 +1,13 @@
+import { useRoutes } from 'react-router-dom';
+import routesConfig from './config/routes';
+
 function App() {
+  const routes = useRoutes(routesConfig);
+
   return (
-    <div className="App text-4xl text-red-500">
-      Hello World
-    </div>
+    <>
+      {routes}
+    </>
   );
 }
 
