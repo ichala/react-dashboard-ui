@@ -5,7 +5,7 @@ import { BiMenuAltLeft } from 'react-icons/bi';
 function Sidebar({ children }) {
   return (
     <>
-      <div className="drawer drawer-mobile">
+      <div className="drawer drawer-mobile ">
         <input id="SideBar" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content  bg-base-100">
           <div className="navbar bg-base-100">
@@ -36,9 +36,10 @@ function Sidebar({ children }) {
             {children}
           </div>
         </div>
-        <div className="drawer-side">
-          <label htmlFor="SideBar" className="drawer-overlay" />
-          <ul className="menu p-4 w-80 bg-base-200 text-base-content">
+        <div className="drawer-side ">
+          <label htmlFor="SideBar" className="drawer-overlay md:rounded-r-full" />
+          <ul className="menu p-4 w-80 bg-base-200 text-base-content rounded-r-3xl">
+
             <li>
               <a href="#s">
                 <FaHome className="h-6 w-6" />
