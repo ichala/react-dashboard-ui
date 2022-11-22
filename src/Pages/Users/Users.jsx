@@ -4,10 +4,11 @@ import {
 } from 'react-icons/fi';
 
 import {
-  BsFillGrid3X3GapFill, BsListUl, BsTable,
+  BsFillGrid3X3GapFill, BsTable,
 } from 'react-icons/bs';
 import SmallStatsCard from '../../Components/Sidebar/Cards/SmallStatsCard';
-import DataGridCardLayout from '../../Components/DataGridCardLayout/DataGridCardLayout';
+import DataGridCardLayout from '../../Components/Users/DataGridCardLayout/UserDataGridCardLayout';
+import UserDataTableLayout from '../../Components/Users/DataGridCardLayout/UserDataTableLayout';
 
 function Users() {
   return (
@@ -28,12 +29,11 @@ function Users() {
               <button type="button" className="btn btn-sm btn-active">
                 <BsFillGrid3X3GapFill />
               </button>
-              <button type="button" className="btn btn-sm">
-                <BsListUl />
-              </button>
+
             </div>
           </div>
           <DataGridCardLayout />
+          <UserDataTableLayout />
         </div>
       </div>
     </div>

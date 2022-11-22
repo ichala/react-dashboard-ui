@@ -13,7 +13,7 @@ function UserCard() {
           </div>
           <div className="flex flex-col justify-center">
             <h2 className="card-title text-sm">UserName</h2>
-            <h4 className="text-sm">email@email.com</h4>
+            <h4 className=" text-sm opacity-50">email@email.com</h4>
           </div>
           <div className="badge badge-primary">Active</div>
         </div>
