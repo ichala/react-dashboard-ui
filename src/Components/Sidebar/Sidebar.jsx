@@ -1,14 +1,15 @@
 import React from 'react';
 import { FaHome, FaChartPie, FaUserFriends } from 'react-icons/fa';
 import { BiMenuAltLeft } from 'react-icons/bi';
+import { NavLink } from 'react-router-dom';
 
 function Sidebar({ children }) {
   return (
     <>
       <div className="drawer drawer-mobile ">
         <input id="SideBar" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content  bg-base-100">
-          <div className="navbar bg-base-100">
+        <div className="drawer-content  bg-base-200">
+          <div className="navbar bg-base-200">
             <div className="flex-1">
               <label htmlFor="SideBar" className="text-base-content  drawer-button lg:hidden"><BiMenuAltLeft size={30} /></label>
             </div>
@@ -47,15 +48,15 @@ function Sidebar({ children }) {
               </a>
             </li>
             <li>
-              <a href="#s">
-                <FaChartPie className="h-6 w-6" />
-                Statistiques
-              </a>
+              <NavLink to="Users">
+                <FaUserFriends className="h-6 w-6" />
+                Users
+              </NavLink>
             </li>
             <li>
               <a href="#s">
-                <FaUserFriends className="h-6 w-6" />
-                Users
+                <FaChartPie className="h-6 w-6" />
+                Statistiques
               </a>
             </li>
 
