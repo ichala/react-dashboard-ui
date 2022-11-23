@@ -22,7 +22,8 @@
       "linebreak-style":0,
       "react/prop-types": "off",
       "jsx-a11y/label-has-associated-control": "off",
-      "jsx-a11y/no-noninteractive-tabindex":"off"
+      "jsx-a11y/no-noninteractive-tabindex":"off",
+      "no-underscore-dangle": "off"
     },
     "ignorePatterns": [
       "dist/",
