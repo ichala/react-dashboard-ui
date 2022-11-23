@@ -43,6 +43,7 @@ function Sidebar({ children }) {
 
             <li>
               <NavLink to="/">
+                {' '}
                 <FaHome className="h-6 w-6" />
                 Home
               </NavLink>
