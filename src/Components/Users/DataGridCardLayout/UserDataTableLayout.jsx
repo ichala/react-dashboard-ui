@@ -1,5 +1,8 @@
 import React from 'react';
 import { AiFillEye, AiOutlineEdit, AiFillDelete } from 'react-icons/ai';
+import { BsGenderMale, BsGenderFemale } from 'react-icons/bs';
+
+import moment from 'moment';
 
 function UserDataTableLayout({ Users }) {
   console.log(Users);
@@ -18,8 +21,8 @@ function UserDataTableLayout({ Users }) {
           {Users.map((user) => (
             <tr key={user.id}>
               <td>
-                <div className="flex items-center justify-start space-x-3">
-                  <div className="avatar">
+                <div className="flex items-center justify-center  space-x-3">
+                  <div className="avatar ">
                     <div className="mask mask-squircle w-12 h-12">
                       <img src={user.avatar} alt={user.firstName} />
                     </div>
@@ -34,10 +37,11 @@ function UserDataTableLayout({ Users }) {
                   </div>
                 </div>
               </td>
-              <td>
-                {Date(user.birthday) }
-                {' '}
-                {user.sex }
+              <td className="capitalize font-semibold  ">
+                <div className="flex justify-center items-center gap-1">
+                  { moment(user.birthday, 'YYYYMMDD').fromNow(true) }
+                  {user.sex !== 'male' ? <BsGenderMale /> : <BsGenderFemale />}
+                </div>
               </td>
               <td>
                 {user.status === 'Active' && <span className="badge badge-success">{user.status}</span>}
