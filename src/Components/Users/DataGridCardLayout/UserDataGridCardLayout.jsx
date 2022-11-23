@@ -1,30 +1,11 @@
 import React from 'react';
 import UserCard from '../../Sidebar/Cards/UserCard';
 
-function DataGridCardLayout() {
+function DataGridCardLayout({ Users }) {
   return (
     <>
       <div className="flex justify-center gap-5 flex-wrap items-center">
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
-        <UserCard />
+        {Users.map((user) => (<UserCard key={user.id} user={user} />))}
       </div>
     </>
   );
