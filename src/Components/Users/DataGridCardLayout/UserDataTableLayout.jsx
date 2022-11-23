@@ -1,18 +1,18 @@
 import React from 'react';
 import { AiFillEye, AiOutlineEdit, AiFillDelete } from 'react-icons/ai';
 import { BsGenderMale, BsGenderFemale } from 'react-icons/bs';
-
 import moment from 'moment';
 
 function UserDataTableLayout({ Users }) {
-  console.log(Users);
   return (
     <div className="overflow-x-auto w-full">
       <table className="table table-zebra w-full text-center">
         <thead>
           <tr className="text-center">
             <th>Name</th>
-            <th>Informations</th>
+            <th>Email</th>
+            <th className="hidden 2xl:table-cell">Phone</th>
+            <th className="hidden 2xl:table-cell">Informations</th>
             <th>Status</th>
             <th>Action</th>
           </tr>
@@ -21,7 +21,7 @@ function UserDataTableLayout({ Users }) {
           {Users.map((user) => (
             <tr key={user.id}>
               <td>
-                <div className="flex items-center justify-center  space-x-3">
+                <div className="flex items-center justify-start  space-x-3">
                   <div className="avatar ">
                     <div className="mask mask-squircle w-12 h-12">
                       <img src={user.avatar} alt={user.firstName} />
@@ -33,11 +33,24 @@ function UserDataTableLayout({ Users }) {
                       {' '}
                       {user.lastName}
                     </div>
-                    <div className="text-sm opacity-50">{user.email}</div>
+                    <div className="text-sm opacity-50 text-left">
+                      @
+                      {user.username}
+                    </div>
                   </div>
                 </div>
               </td>
-              <td className="capitalize font-semibold  ">
+              <td className="capitalize  ">
+                <div className="flex justify-center items-center gap-1">
+                  {user.email}
+                </div>
+              </td>
+              <td className="capitalize  hidden 2xl:table-cell">
+                <div className="flex justify-center items-center gap-1">
+                  {user.phone}
+                </div>
+              </td>
+              <td className="capitalize font-semibold  hidden 2xl:table-cell">
                 <div className="flex justify-center items-center gap-1">
                   { moment(user.birthday, 'YYYYMMDD').fromNow(true) }
                   {user.sex !== 'male' ? <BsGenderMale /> : <BsGenderFemale />}

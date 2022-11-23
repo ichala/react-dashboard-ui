@@ -38,14 +38,14 @@ function Sidebar({ children }) {
           </div>
         </div>
         <div className="drawer-side ">
-          <label htmlFor="SideBar" className="drawer-overlay md:rounded-r-full" />
-          <ul className="menu p-4 w-80 bg-base-200 text-base-content rounded-r-3xl">
+          <label htmlFor="SideBar" className="drawer-overlay " />
+          <ul className="menu p-4 w-80 bg-base-200 text-base-content ">
 
             <li>
-              <a href="#s">
+              <NavLink to="/">
                 <FaHome className="h-6 w-6" />
                 Home
-              </a>
+              </NavLink>
             </li>
             <li>
               <NavLink to="Users">
