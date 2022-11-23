@@ -16,7 +16,7 @@ function UserDataTableLayout({ Users }) {
         </thead>
         <tbody>
           {Users.map((user) => (
-            <tr key={user._id}>
+            <tr key={user.id}>
               <td>
                 <div className="flex items-center justify-start space-x-3">
                   <div className="avatar">
