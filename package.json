@@ -8,6 +8,7 @@
     "@babel/plugin-syntax-jsx": "7.x",
     "@babel/preset-env": "7.x",
     "@babel/preset-react": "7.x",
+    "@faker-js/faker": "^7.6.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
