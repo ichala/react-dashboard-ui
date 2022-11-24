@@ -1,7 +1,7 @@
 import React from 'react';
-import { AiFillEye, AiOutlineEdit, AiFillDelete } from 'react-icons/ai';
 import { BsGenderMale, BsGenderFemale } from 'react-icons/bs';
 import moment from 'moment';
+import CrudTools from '../../ToolsBar/CrudTools';
 
 function UserDataTableLayout({ Users }) {
   return (
@@ -19,7 +19,7 @@ function UserDataTableLayout({ Users }) {
         </thead>
         <tbody>
           {Users.map((user) => (
-            <tr key={user.id}>
+            <tr id={user.id} key={user.id}>
               <td>
                 <div className="flex items-center justify-start  space-x-3">
                   <div className="avatar ">
@@ -62,17 +62,7 @@ function UserDataTableLayout({ Users }) {
                 {user.status === 'Desactivated' && <span className="badge badge-warning">{user.status}</span>}
               </td>
               <td>
-                <div className="btn-group ">
-                  <button type="button" className="btn btn-sm ">
-                    <AiFillEye />
-                  </button>
-                  <button type="button" className="btn btn-sm">
-                    <AiOutlineEdit />
-                  </button>
-                  <button type="button" className="btn btn-sm">
-                    <AiFillDelete />
-                  </button>
-                </div>
+                <CrudTools userData={{ id: user.id, username: user.username }} />
 
               </td>
             </tr>
