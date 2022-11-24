@@ -13,6 +13,7 @@ function ThemeSelect() {
           <option value="night">night</option>
           <option value="black">black</option>
           <option value="halloween">halloween</option>
+          <option value="business">business</option>
           <option value="cupcake">cupcake</option>
           <option value="emerald">emerald</option>
           <option value="retro">retro</option>
