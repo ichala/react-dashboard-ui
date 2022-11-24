@@ -13,7 +13,12 @@ root.render(
     <BrowserRouter>
       <ThemeProvider>
         <Layout>
-          <Toaster />
+          <Toaster toastOptions={{
+            style: {
+              zIndex: '999 !important',
+            },
+          }}
+          />
           <App />
         </Layout>
       </ThemeProvider>
