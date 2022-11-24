@@ -1,5 +1,5 @@
 import React from 'react';
-import UserCard from '../../Sidebar/Cards/UserCard';
+import UserCard from '../../Cards/UserCard';
 
 function DataGridCardLayout({ Users }) {
   return (

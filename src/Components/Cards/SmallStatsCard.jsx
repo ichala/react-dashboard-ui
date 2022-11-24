@@ -3,7 +3,7 @@ function SmallStatsCard({
 }) {
   return (
     loading ? (
-      <div className="card glass lg:w-[23%]   w-full bg-base-100 shadow-md ">
+      <div className="card  lg:w-[23%]   w-full bg-base-100 shadow-md ">
         <div className="card-body p-2 flex flex-row justify-arround items-center ">
           <div className="animate-pulse flex w-full space-x-4">
             <div className="icon p-4 rounded-lg h-10 w-10 bg-base-300" />
@@ -18,7 +18,7 @@ function SmallStatsCard({
       </div>
     )
       : (
-        <div className="card glass lg:w-[23%]   w-full bg-base-100 shadow-md">
+        <div className="card  lg:w-[23%]   w-full bg-base-100 shadow-md">
           <div className="card-body p-2 flex flex-row justify-arround items-center">
             <div className="icon p-4 rounded-lg">{icon}</div>
             <div className="flex flex-col justify-start">

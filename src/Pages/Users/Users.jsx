@@ -6,7 +6,7 @@ import {
 import {
   BsFillGrid3X3GapFill, BsTable,
 } from 'react-icons/bs';
-import SmallStatsCard from '../../Components/Sidebar/Cards/SmallStatsCard';
+import SmallStatsCard from '../../Components/Cards/SmallStatsCard';
 import DataGridCardLayout from '../../Components/Users/DataGridCardLayout/UserDataGridCardLayout';
 import UserDataTableLayout from '../../Components/Users/DataGridCardLayout/UserDataTableLayout';
 import createRandomUser from '../../@FakeDB/generate';
