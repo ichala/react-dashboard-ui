@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {
-  FiUserMinus, FiUserPlus, FiUsers, FiUserX, FiPlusCircle,
+  FiUserMinus, FiUserPlus, FiUsers, FiUserX,
 } from 'react-icons/fi';
 
 import {
@@ -10,6 +10,7 @@ import SmallStatsCard from '../../Components/Cards/SmallStatsCard';
 import DataGridCardLayout from '../../Components/Users/DataGridCardLayout/UserDataGridCardLayout';
 import UserDataTableLayout from '../../Components/Users/DataGridCardLayout/UserDataTableLayout';
 import createRandomUser from '../../@FakeDB/generate';
+import AddUser from '../../Components/Users/DataGridCardLayout/AddUser';
 
 function Users() {
   const [DataLayout, setDataLayout] = useState('Table');
@@ -27,7 +28,7 @@ function Users() {
   };
   useEffect(() => {
     const GeneratedUsers = [];
-    Array.from({ length: 40 }).forEach(() => {
+    Array.from({ length: 10 }).forEach(() => {
       GeneratedUsers.push(createRandomUser());
     });
     // Simulate Api Calls
@@ -78,10 +79,7 @@ function Users() {
               <div className="card w-full bg-base-100 shadow-md">
                 <div className="card-body">
                   <div className="card-actions justify-between items-center px-5">
-                    <label htmlFor="new-user-modal" type="button" className="btn btn-primary btn-sm gap-2">
-                      <FiPlusCircle size={20} />
-                      Add User
-                    </label>
+                    <AddUser />
                     <input onChange={(e) => filterUsers(e.target.value)} type="text" placeholder="Search Name/Status/Sex..." className="input focus:outline-0 font-semibold md:text-2xl md:input-sm input-bordered  w-full max-w-xs " />
                     <div className="btn-group">
                       <button onClick={() => setDataLayout('Table')} type="button" className={`btn btn-sm ${DataLayout === 'Table' && 'btn-active'}`}>
@@ -93,16 +91,15 @@ function Users() {
                     </div>
                   </div>
                   {DataLayout === 'Table' ? <UserDataTableLayout Users={FiltredUsers} /> : <DataGridCardLayout Users={FiltredUsers} />}
-
-                </div>
-              </div>
-              <input type="checkbox" id="new-user-modal" className="modal-toggle" />
-              <div className="modal ">
-                <div className="modal-box  max-w-5xl">
-                  <h3 className="font-bold text-lg">Congratulations random Internet user!</h3>
-                  <p className="py-4">Youve been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-                  <div className="modal-action">
-                    <label htmlFor="new-user-modal" className="btn">Yay!</label>
+                  <div className="btn-group flex justify-center w-full mt-4">
+                    <button type="button" className="btn">«</button>
+                    <button type="button" className="btn">Page 1</button>
+                    <button
+                      type="button"
+                      className="btn"
+                    >
+                      »
+                    </button>
                   </div>
                 </div>
               </div>
