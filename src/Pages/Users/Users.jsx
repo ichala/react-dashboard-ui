@@ -11,12 +11,14 @@ import DataGridCardLayout from '../../Components/Users/DataGridCardLayout/UserDa
 import UserDataTableLayout from '../../Components/Users/DataGridCardLayout/UserDataTableLayout';
 import createRandomUser from '../../@FakeDB/generate';
 import AddUser from '../../Components/Users/DataGridCardLayout/AddUser';
+import EditUser from '../../Components/Users/DataGridCardLayout/EditUser';
 
 function Users() {
   const [DataLayout, setDataLayout] = useState('Table');
   const [Users, setUsers] = useState([]);
   const [FiltredUsers, setFiltredUsers] = useState([]);
   const [Loading, setLoading] = useState(true);
+  const [SelectedUser, setSelectedUser] = useState(null);
   const filterUsers = (text) => {
     setFiltredUsers(
       Users.filter((user) => user.firstName.toLowerCase().includes(text.toLowerCase())
@@ -80,6 +82,12 @@ function Users() {
                 <div className="card-body">
                   <div className="card-actions justify-between items-center px-5">
                     <AddUser />
+                    {SelectedUser && (
+                    <EditUser
+                      user={SelectedUser}
+                      setSelectedUser={setSelectedUser}
+                    />
+                    )}
                     <input onChange={(e) => filterUsers(e.target.value)} type="text" placeholder="Search Name/Status/Sex..." className="input focus:outline-0 font-semibold md:text-2xl md:input-sm input-bordered  w-full max-w-xs " />
                     <div className="btn-group">
                       <button onClick={() => setDataLayout('Table')} type="button" className={`btn btn-sm ${DataLayout === 'Table' && 'btn-active'}`}>
@@ -90,7 +98,7 @@ function Users() {
                       </button>
                     </div>
                   </div>
-                  {DataLayout === 'Table' ? <UserDataTableLayout Users={FiltredUsers} /> : <DataGridCardLayout Users={FiltredUsers} />}
+                  {DataLayout === 'Table' ? <UserDataTableLayout Users={FiltredUsers} setSelectedUser={setSelectedUser} /> : <DataGridCardLayout Users={FiltredUsers} setSelectedUser={setSelectedUser} />}
                   <div className="btn-group flex justify-center w-full mt-4">
                     <button type="button" className="btn">«</button>
                     <button type="button" className="btn">Page 1</button>

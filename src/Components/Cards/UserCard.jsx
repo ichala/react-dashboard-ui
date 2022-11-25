@@ -1,7 +1,7 @@
 import React from 'react';
 import CrudTools from '../ToolsBar/CrudTools';
 
-function UserCard({ user }) {
+function UserCard({ user, setSelectedUser }) {
   return (
     <div id={user.id} className="card w-full 2xl:w-[23%] lg:w-[45%] bg-base-200 shadow-xl overflow-hidden">
       <div className="card-body">
@@ -28,7 +28,10 @@ function UserCard({ user }) {
           {user.status === 'Desactivated' && <span className="badge badge-warning">{user.status}</span>}
         </div>
         <div className="card-actions justify-center">
-          <CrudTools userData={{ id: user.id, username: user.username }} />
+          <CrudTools
+            SelectedUser={setSelectedUser}
+            userData={user}
+          />
         </div>
       </div>
     </div>
