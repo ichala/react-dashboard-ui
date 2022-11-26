@@ -4,7 +4,7 @@ import {
 } from 'react-icons/fi';
 
 import {
-  BsFillGrid3X3GapFill, BsTable,
+  BsFillGrid3X3GapFill, BsInfoCircleFill, BsTable,
 } from 'react-icons/bs';
 import SmallStatsCard from '../../Components/Cards/SmallStatsCard';
 import DataGridCardLayout from '../../Components/Users/DataGridCardLayout/UserDataGridCardLayout';
@@ -77,6 +77,12 @@ function Users() {
                 <SmallStatsCard icon={<FiUserPlus size={25} />} stats="203" title="New" change="-10" />
                 <SmallStatsCard icon={<FiUserMinus size={25} />} stats="9" title="Deleted" change="-22" />
                 <SmallStatsCard icon={<FiUserX size={25} />} stats="107" title="Banned" change="-34" />
+              </div>
+              <div className="alert p-4 m-2 alert-info italic font-semibold max-w-md shadow-lg">
+                <div>
+                  <BsInfoCircleFill size={20} />
+                  <span>This is only a demo , changes will not  be saved</span>
+                </div>
               </div>
               <div className="card w-full bg-base-100 shadow-md">
                 <div className="card-body">

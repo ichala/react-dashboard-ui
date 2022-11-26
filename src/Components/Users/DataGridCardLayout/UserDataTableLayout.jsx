@@ -1,7 +1,7 @@
 import React from 'react';
 import { BsGenderMale, BsGenderFemale } from 'react-icons/bs';
 import moment from 'moment';
-import CrudTools from '../../ToolsBar/CrudTools';
+import CrudTools from './ToolsBar/CrudTools';
 
 function UserDataTableLayout({ Users, setSelectedUser }) {
   return (

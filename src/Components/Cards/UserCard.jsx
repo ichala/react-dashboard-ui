@@ -1,5 +1,5 @@
 import React from 'react';
-import CrudTools from '../ToolsBar/CrudTools';
+import CrudTools from '../Users/DataGridCardLayout/ToolsBar/CrudTools';
 
 function UserCard({ user, setSelectedUser }) {
   return (
