@@ -1,15 +1,12 @@
 import React from 'react';
 
 function Modal({
-  btnTitle, btnIcon, children,
+  children, modalId,
 }) {
   return (
     <>
-      <label htmlFor="modal-box-content" type="button" className="btn btn-primary btn-sm gap-2">
-        {btnIcon}
-        {btnTitle}
-      </label>
-      <input type="checkbox" id="modal-box-content" className="modal-toggle" />
+
+      <input type="checkbox" id={modalId} className="modal-toggle" />
       <div className="modal ">
         <div className="modal-box  max-w-5xl">
           {children}

@@ -1,9 +1,9 @@
 import React from 'react';
 import { BsGenderMale, BsGenderFemale } from 'react-icons/bs';
 import moment from 'moment';
-import CrudTools from '../../ToolsBar/CrudTools';
+import CrudTools from '../ToolsBar/CrudTools';
 
-function UserDataTableLayout({ Users }) {
+function UserDataTableLayout({ Users, setSelectedUser }) {
   return (
     <div className="overflow-x-auto w-full">
       <table className="table table-zebra w-full text-center">
@@ -62,7 +62,7 @@ function UserDataTableLayout({ Users }) {
                 {user.status === 'Desactivated' && <span className="badge badge-warning">{user.status}</span>}
               </td>
               <td>
-                <CrudTools userData={{ id: user.id, username: user.username }} />
+                <CrudTools SelectedUser={setSelectedUser} userData={user} />
 
               </td>
             </tr>
