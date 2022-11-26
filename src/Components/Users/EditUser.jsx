@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
 import { FiPlusCircle } from 'react-icons/fi';
-import Modal from '../../Modal/Modal';
+import Modal from '../Modal/Modal';
 
 function EditUser({ user, setSelectedUser }) {
   const [ImageSrc, setImageSrc] = useState(user.avatar);

@@ -1,14 +1,15 @@
 import React from 'react';
 import { AiFillEye, AiOutlineEdit, AiFillDelete } from 'react-icons/ai';
 import toast from 'react-hot-toast';
+import { Link } from 'react-router-dom';
 
 function CrudTools({ userData, SelectedUser }) {
   const handleDelete = () => { toast.success(`@${userData.username} Successfully Deleted!`); document.getElementById(userData.id).style.display = 'none'; };
   return (
     <div className="btn-group ">
-      <button type="button" className="btn btn-sm ">
+      <Link className="btn btn-sm " to={userData.id}>
         <AiFillEye />
-      </button>
+      </Link>
       <label
         htmlFor="modal-editUser"
         onClick={() => SelectedUser(userData)}

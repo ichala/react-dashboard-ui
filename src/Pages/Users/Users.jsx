@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {
   FiUserMinus, FiUserPlus, FiUsers, FiUserX,
 } from 'react-icons/fi';
@@ -9,13 +9,14 @@ import {
 import SmallStatsCard from '../../Components/Cards/SmallStatsCard';
 import DataGridCardLayout from '../../Components/Users/DataGridCardLayout/UserDataGridCardLayout';
 import UserDataTableLayout from '../../Components/Users/DataGridCardLayout/UserDataTableLayout';
-import createRandomUser from '../../@FakeDB/generate';
-import AddUser from '../../Components/Users/DataGridCardLayout/AddUser';
-import EditUser from '../../Components/Users/DataGridCardLayout/EditUser';
+import AddUser from '../../Components/Users/AddUser';
+import EditUser from '../../Components/Users/EditUser';
+import { DataContext } from '../../config/Context/database';
 
 function Users() {
+  // TODO: Update EditUser
   const [DataLayout, setDataLayout] = useState('Table');
-  const [Users, setUsers] = useState([]);
+  const { Users } = useContext(DataContext);
   const [FiltredUsers, setFiltredUsers] = useState([]);
   const [Loading, setLoading] = useState(true);
   const [SelectedUser, setSelectedUser] = useState(null);
@@ -29,17 +30,12 @@ function Users() {
     );
   };
   useEffect(() => {
-    const GeneratedUsers = [];
-    Array.from({ length: 10 }).forEach(() => {
-      GeneratedUsers.push(createRandomUser());
-    });
     // Simulate Api Calls
     setTimeout(() => {
-      setUsers(GeneratedUsers);
-      setFiltredUsers(GeneratedUsers);
+      setFiltredUsers(Users);
       setLoading(false);
     }, 1000);
-  }, []);
+  }, [Users]);
 
   return (
     <>
