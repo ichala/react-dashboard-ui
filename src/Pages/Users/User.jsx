@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { BsInfoCircleFill } from 'react-icons/bs';
 import {
+  Outlet,
+  useLocation,
   useNavigate, useParams,
 } from 'react-router-dom';
 import UserBasicInformations from '../../Components/Users/User/UserComponents/UserBasicInformations';
@@ -10,6 +12,7 @@ import { DataContext } from '../../config/Context/database';
 
 function User() {
   const { id } = useParams();
+  const location = useLocation();
   const navigate = useNavigate();
   const { Users } = useContext(DataContext);
   const [User, setUser] = useState(null);
@@ -21,11 +24,13 @@ function User() {
       setTimeout(async () => {
         setUser(User);
         setLoading(false);
-        navigate('overview');
+        if (location.key === 'default' || location.pathname.toLowerCase() === `/users/${id}`) {
+          navigate('overview');
+        }
       }, 1000);
     };
     getUser();
-  }, [Users, id, navigate]);
+  }, []);
   if (Loading) {
     return 'loading';
   }
@@ -48,7 +53,12 @@ function User() {
           <UserBasicInformations User={User} />
           <UserSocials Users={Users} />
         </div>
-        <UserNavTabs />
+        <div className="px-4 mt-5 xl:mt-0 w-full xl:w-3/4 ">
+          <UserNavTabs />
+          <div className="md:p-4 text-base-content mt-5 md:mt-0">
+            <Outlet context={{ User }} />
+          </div>
+        </div>
       </div>
     </div>
   );

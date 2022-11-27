@@ -4,7 +4,7 @@ import {
 } from 'react-icons/fa';
 
 const UserBasicInformations = ({ User }) => (
-  <div className="card w-full bg-base-100 text-base-content shadow-xl">
+  <div className="card w-full bg-base-100 text-base-content shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
     <div className="card-body">
       <div className="flex justify-center items-center flex-col gap-3">
         <div className="avatar flex justify-center">
@@ -13,7 +13,7 @@ const UserBasicInformations = ({ User }) => (
           </div>
         </div>
         <h2 className="card-title">
-          {User.firstName}
+          {`${User.firstName} `}
           {User.lastName}
         </h2>
         <div className="flex justify-evenly mt-5  w-full">

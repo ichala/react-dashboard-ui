@@ -20,19 +20,22 @@ const routesConfig = [
     path: '/users/:id',
     element: <User />,
     children: [{
-      path: '/users/:id/overview',
+      path: 'overview',
       element: <Overview />,
     }, {
-      path: '/users/:id/billing',
+      path: 'billing',
       element: <Billing />,
     },
     {
-      path: '/users/:id/accounts',
+      path: 'accounts',
       element: <Accounts />,
     },
     {
-      path: '/users/:id/preferences',
+      path: 'preferences',
       element: <Preferences />,
+    }, {
+      path: '*',
+      element: <Overview />,
     }],
   },
 
