@@ -1,7 +1,7 @@
 import React from 'react';
 
 const AboutUser = () => (
-  <div className="card w-full  bg-base-100 text-base-content shadow-xl">
+  <div className="card w-full  bg-base-100 text-base-content shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
     <div className="card-body p-3">
       <div className="card-title italic opacity-70 m-3">About User</div>
       <p className="italic opacity-70">

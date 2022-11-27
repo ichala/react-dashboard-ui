@@ -4,7 +4,7 @@ import { BiCommentDetail } from 'react-icons/bi';
 import ActivityCard from './ActivityCard';
 
 const RecentActivity = () => (
-  <div className="card w-full 2xl:w-1/2  bg-base-100 text-base-content shadow-xl">
+  <div className="card w-full 2xl:w-1/2  bg-base-100 text-base-content shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
     <div className="card-body p-3">
       <div className="card-title opacity-70 m-3 italic">Recent Activity</div>
       <div className="flex flex-col gap-2 w-full">
