@@ -3,7 +3,7 @@ import CrudTools from '../Users/ToolsBar/CrudTools';
 
 function UserCard({ user, setSelectedUser }) {
   return (
-    <div id={user.id} className="card w-full 2xl:w-[23%] lg:w-[45%] md:w-[45%] sm:w-[45%] bg-base-200 shadow-xl overflow-hidden">
+    <div id={user.id} className="card w-full 2xl:w-[23%] lg:w-[45%] md:w-[45%] sm:w-[45%] bg-base-200 shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)] overflow-hidden">
       <div className="card-body">
 
         <div className="flex flex-col justify-center items-center gap-2">
