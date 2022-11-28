@@ -3,7 +3,7 @@ import React from 'react';
 const PaymentMethods = ({ User }) => (
   <div className="card bg-base-100 p-3 text-base-content shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]   ">
     <div className="card-body p-1">
-      <div className="card-title opacity-70 m-3 italic">Payments Informations</div>
+      <div className="card-title opacity-70 m-1 italic">Payments Informations</div>
       <div className="flex flex-col xl:flex-row xl:flex-between justify-center items-center gap-4">
         <div id="card" className="relative w-full h-60 rounded-2xl font-mono text-white overflow-hidden cursor-pointer transition-all duration-500">
           <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center gap-6 p-6 bg-gradient-to-tr from-secondary to-neutral transition-all duration-100 delay-200 z-20">
