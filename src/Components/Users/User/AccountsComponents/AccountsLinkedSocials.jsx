@@ -26,7 +26,7 @@ const AccountsLinkedSocials = () => (
             <span className="text-primary">@_ichala</span>
           </div>
         </div>
-        <input type="checkbox" className="toggle toggle-primary" checked />
+        <input type="checkbox" className="toggle toggle-primary" checked readOnly />
       </div>
       <div className="flex justify-between  w-full">
         <div className="flex items-center justify-start gap-1">
@@ -46,7 +46,7 @@ const AccountsLinkedSocials = () => (
             <span className="text-primary">iChala-#8362</span>
           </div>
         </div>
-        <input type="checkbox" className="toggle toggle-primary" checked />
+        <input type="checkbox" className="toggle toggle-primary" checked readOnly />
       </div>
       <div className="flex justify-between  w-full">
         <div className="flex items-center justify-start gap-1">
