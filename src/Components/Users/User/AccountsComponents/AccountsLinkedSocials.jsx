@@ -5,7 +5,7 @@ import {
 } from 'react-icons/fa';
 
 const AccountsLinkedSocials = () => (
-  <div className="card bg-base-100 p-3 text-base-content shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]   ">
+  <div className="card  bg-base-100 p-3 text-base-content shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]   ">
     <div className="card-body p-1">
       <div className="card-title opacity-70 m-1 italic">Linked Accounts</div>
       <div className="flex justify-between  w-full">
