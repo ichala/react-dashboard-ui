@@ -20,28 +20,26 @@ const RecentTransactions = ({ inovices }) => (
           <tbody>
 
             {inovices.map((item) => (
-              <>
-                <tr key={item.id}>
-                  <th colSpan={2}>
-                    #
-                    {item.id.slice(0, 7)}
-                  </th>
-                  <td>{item.typeof}</td>
-                  <td>{`${item.amount} $`}</td>
-                  <td>{item.payment}</td>
-                  <td>
-                    {`${moment(item.date, 'YYYYMMDD').fromNow(true)} ` }
-                    ago
-                  </td>
-                  <td>
+              <tr key={item.id}>
+                <th colSpan={2}>
+                  #
+                  {item.id.slice(0, 7)}
+                </th>
+                <td>{item.typeof}</td>
+                <td>{`${item.amount} $`}</td>
+                <td>{item.payment}</td>
+                <td>
+                  {`${moment(item.date, 'YYYYMMDD').fromNow(true)} ` }
+                  ago
+                </td>
+                <td>
 
-                    {item.status === 'Paid' && <span className="badge badge-success">{item.status}</span>}
-                    {item.status === 'Canceled' && <span className="badge badge-error">{item.status}</span>}
-                    {item.status === 'Pending' && <span className="badge badge-warning">{item.status}</span>}
+                  {item.status === 'Paid' && <span className="badge badge-success">{item.status}</span>}
+                  {item.status === 'Canceled' && <span className="badge badge-error">{item.status}</span>}
+                  {item.status === 'Pending' && <span className="badge badge-warning">{item.status}</span>}
 
-                  </td>
-                </tr>
-              </>
+                </td>
+              </tr>
             ))}
 
           </tbody>
