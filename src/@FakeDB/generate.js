@@ -16,6 +16,7 @@ const generateInovicesUser = (count) => {
 };
 const createRandomUser = () => ({
   id: faker.datatype.uuid(),
+  verified: faker.datatype.boolean(),
   username: faker.internet.userName(),
   avatar: faker.image.avatar(),
   phone: faker.phone.number(),

@@ -3,7 +3,7 @@ import React from 'react';
 const UserSocials = ({ Users }) => (
   <div className="card w-full mt-5 bg-base-100 text-base-content shadow-[0px_4px_16px_rgba(17,17,26,0.1),_0px_8px_24px_rgba(17,17,26,0.1),_0px_16px_56px_rgba(17,17,26,0.1)]">
     <div className="card-body p-3">
-      <div className="card-title opacity-70 m-3 italic">User Socials</div>
+      <div className="card-title opacity-70 m-1 italic">User Socials</div>
       <span className="opacity-70 text-sm font-semibold">Friends</span>
       <hr />
       <div className="flex flex-wrap justify-center">
