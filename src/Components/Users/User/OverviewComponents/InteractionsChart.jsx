@@ -69,7 +69,7 @@ const InteractionsChart = () => {
   return (
     <div className="card w-full 2xl:w-1/2  bg-base-100 text-base-content">
       <div className="card-body p-3 bg-transparent ">
-        <div className="card-title opacity-70 m-3 italic">User Interactions</div>
+        <div className="card-title opacity-70 m-1 italic">User Interactions</div>
         <Chart className="text-base-content" options={ChartOptions} series={ChartSeries} />
       </div>
     </div>
