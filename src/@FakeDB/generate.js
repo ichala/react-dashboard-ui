@@ -37,8 +37,8 @@ const createRandomUser = () => ({
   inovices: generateInovicesUser(15),
   media: [faker.image.avatar(), faker.image.city(),
     faker.image.food(), faker.image.cats(), faker.image.fashion(),
-    faker.image.avatar(), faker.image.city(),
-    faker.image.food(), faker.image.cats(), faker.image.fashion()],
+    faker.image.avatar(),
+  ],
 });
 
 const generateRandomUsers = (count) => {

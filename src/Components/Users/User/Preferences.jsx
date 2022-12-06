@@ -1,7 +1,8 @@
 import React from 'react';
+import NotificationsPreferences from './PreferencesComponents/NotificationsPreferences';
 
 const Preferences = () => (
-  <div>Preferences</div>
+  <div><NotificationsPreferences /></div>
 );
 
 export default Preferences;
