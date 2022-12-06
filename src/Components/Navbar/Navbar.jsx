@@ -11,7 +11,7 @@ function Navbar() {
       <ThemeSelect />
       <div className="flex-none">
 
-        <div tabIndex={0} className="dropdown dropdown-end">
+        <div tabIndex={0} className="dropdown dropdown-end text-base-content">
           <label className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">
               <img alt="s" src="https://placeimg.com/80/80/people" />

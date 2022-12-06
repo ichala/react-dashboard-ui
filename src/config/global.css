@@ -15,16 +15,17 @@
 
 ::-webkit-scrollbar {
     width: 5px;
+    height: 5px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: hsl(var(--b3));
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: hsl(var(--p));
   }
   
   /* Handle on hover */
