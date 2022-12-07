@@ -8,6 +8,7 @@ import {
 import UserBasicInformations from '../../Components/Users/User/UserComponents/UserBasicInformations';
 import UserNavTabs from '../../Components/Users/User/UserComponents/UserNavTabs';
 import UserSocials from '../../Components/Users/User/UserComponents/UserSocials';
+import UsersLoading from '../../Components/Users/UserLoading';
 import { DataContext } from '../../config/Context/database';
 
 function User() {
@@ -32,7 +33,7 @@ function User() {
     getUser();
   }, []);
   if (Loading) {
-    return 'loading';
+    return <UsersLoading />;
   }
   if (!User) {
     return (
